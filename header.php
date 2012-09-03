@@ -54,13 +54,8 @@
 			<div id="header">
 			
 				<div class="padder">
-					<div id="barra-header">
-						<ul>
-							<li>MENU-1</li>
-							<li>MENU-2</li>
-							<li>MENU-3</li>
-					</div>	
-					
+
+						
 						<?php if($logo): ?>
 						<div id="logo">
 								<a href="<?php echo site_url() ?>" title="<?php _e( 'Home', 'buddypress' )

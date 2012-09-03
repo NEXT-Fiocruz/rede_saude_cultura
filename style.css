@@ -208,20 +208,7 @@ div.widget_rss h4:first-child a img{
 /*--------------------------------------------------------------
 2.2 - Header
 --------------------------------------------------------------*/
-#barra-header {
-	width: 40%;
-	position: absolute;
-	right: 0;
-	padding: 3px;
-	background: #F1F1F1;
-	color: #8D8D8D;
-	border-left: 3px solid #DBDBDB;
-	border-bottom: 1px solid #E0E0E0;
-}
-#barra-header li {
-	float: left;
-	margin: 0 5px;
-}
+
 #header {
 	position: relative;
 	height: 126px;
