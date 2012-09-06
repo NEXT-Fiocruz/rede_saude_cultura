@@ -54,10 +54,7 @@
 			<div id="header">
 			
 				<div class="padder">
-<<<<<<< HEAD
-
 						
-=======
 					<div id="menu-header">
 						<?php
 							wp_nav_menu( array(
@@ -79,7 +76,6 @@
 						?>
 					</div>	
 					
->>>>>>> anne/master
 						<?php if($logo): ?>
 						<div id="logo">
 								<a href="<?php echo site_url() ?>" title="<?php _e( 'Home', 'buddypress' )
