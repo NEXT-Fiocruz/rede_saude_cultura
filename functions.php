@@ -190,5 +190,14 @@ function displayedUserInfo_func( $atts = array() ) {
 add_shortcode( 'displayedUserInfo', 'displayedUserInfo_func' );
 
 
+/* MENU HEADER */
+
+if ( function_exists( 'register_nav_menu' ) ) {
+    register_nav_menu( 'menu_header', 'Este é o menu do Header' );
+}
+
+
+
+
 
 ?>

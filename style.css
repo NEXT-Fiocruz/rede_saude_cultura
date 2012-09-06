@@ -209,6 +209,26 @@ div.widget_rss h4:first-child a img{
 2.2 - Header
 --------------------------------------------------------------*/
 
+#menu-header {
+	position: absolute;
+	right: 0;
+	padding: 3px;
+	background: #F1F1F1;
+	color: #8D8D8D;
+	border-left: 3px solid #DBDBDB;
+	border-bottom: 1px solid #E0E0E0;
+}
+#menu-header li {
+	float: left;
+	margin: 0 5px;
+}
+#menu_header ul.lista_menu_header a {
+	margin: 0 5px;
+	color: #818181;
+}
+#menu_header ul.lista_menu_header a:hover {
+	color: #646464;
+}
 #header {
 	position: relative;
 	height: 126px;

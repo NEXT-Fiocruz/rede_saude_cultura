@@ -54,8 +54,32 @@
 			<div id="header">
 			
 				<div class="padder">
+<<<<<<< HEAD
 
 						
+=======
+					<div id="menu-header">
+						<?php
+							wp_nav_menu( array(
+							'menu' 				=> 'menu_header',
+							'theme_location'    => 'menu_header',
+							'container'         => 'div',
+							'container_class'   => 'menu_header',
+							'container_id'      => 'menu_header',
+							'menu_class'        => 'lista_menu_header',
+							'echo'           	=> true,
+							'menu_id'        	=> 'menu_header',
+							'before'         	=> '',
+							'after'          	=> '|',
+							'link_before'    	=> '',
+							'link_after'     	=> '',
+							'depth'          	=> 0,
+							'walker'          	=> '',                
+						) );
+						?>
+					</div>	
+					
+>>>>>>> anne/master
 						<?php if($logo): ?>
 						<div id="logo">
 								<a href="<?php echo site_url() ?>" title="<?php _e( 'Home', 'buddypress' )
