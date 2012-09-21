@@ -19,7 +19,6 @@
   <?php else: ?>
     <div id="content"class="two_column_left">
   <?php endif; ?>
-	
 		<div class="padder">
   <div id="destacado">
     <?php do_action( 'bp_before_member_settings_template' ); ?>
