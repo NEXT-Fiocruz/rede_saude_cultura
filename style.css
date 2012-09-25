@@ -233,6 +233,7 @@ div.widget_rss h4:first-child a img{
 	position: relative;
 	height: 126px;
 	margin-bottom: 30px;
+	background: url('./_inc/images/bg_topo.jpg');
 	z-index: 1000; /* Allows drop-down navigation to appear above #container */
 }
 #header .padder {
@@ -241,12 +242,13 @@ div.widget_rss h4:first-child a img{
 #header div#logo {
   left: 10px;
   position: absolute;
-  top: 15px;
+  top: 0px;
   z-index: 1;
   overflow: hidden;
 }
 div.description {
 	top: 120px;
+	display: none;
 	font-weight: bold;
 	left: 60px;
 	position: absolute;
