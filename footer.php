@@ -51,12 +51,7 @@
 			</div> 
 		<?php endif;?>
 		
-  <a href="<?php print get_bloginfo('url'); ?>/wp-content/plugins/bp-next-simple-user-report/submitnewissue.php" id="bug" class="duvidas-ou-sugestoes">
-			Duvidas ou Sugestões
-	</a>
-	<a href="<?php print get_bloginfo('url'); ?>/ajuda/helpdesk/" id="suporte" class="suporte-helpdesk">
-			Suporte Helpdesk 
-	</a>
+  
     <script language="JavaScript">
       jQuery(document).ready(function() {
       jQuery('.duvidas-ou-sugestoes').colorbox({href:'<?php print get_bloginfo('url'); ?>/wp-content/plugins/bp-next-simple-user-report/submitnewissue.php', opacity: 0.3, iframe:true, width:'570px', height:'660px'});});
