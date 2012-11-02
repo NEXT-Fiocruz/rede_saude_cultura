@@ -10,7 +10,7 @@
         var getOcs = <?php if(!empty($_GET['ocs'])){ print $_GET['ocs']; } else{ print 0;  }  ?> ;
           
         if( isInIframe && getOcs == 0 ){
-          window.location.href = window.location.href . '?ocs=1'; 
+          window.location.href = window.location.href + '?ocs=1'; 
         }
     </script>
 
