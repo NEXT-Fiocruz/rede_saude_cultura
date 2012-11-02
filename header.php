@@ -2,6 +2,18 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 	<head profile="http://gmpg.org/xfn/11">
+
+   <!-- Codigo para manter um ususário no evento com o tema pequeno  -->
+    <script >
+        var isInIframe = (window.location != window.parent.location) ? true : false;
+          
+        var getOcs = <?php if(!empty($_GET['ocs'])){ print $_GET['ocs']; } else{ print 0;  }  ?> ;
+          
+        if( isInIframe && getOcs == 0 ){
+          window.location.href = window.location.href . '?ocs=1'; 
+        }
+    </script>
+
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 		<title><?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?></title>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
@@ -32,22 +44,7 @@
 		<meta property="og:description" content="<?php bloginfo('description'); ?>" />
 		<!-- Facebook OpenGraph Tags -->
 	
-	 <!-- Codigo para manter um ususário no evento com o tema pequeno  -->
-    <script >
-      jQuery(document).ready(function() {
-        
-        var isInIframe = (window.location != window.parent.location) ? true : false;
-        if(){
-          
-          var getOcs = <?php if(!empty($_GET['ocs'])){ print $_GET['ocs']; } else{ print 0;  }  ?> ;
-          
-          if( isInIframe && getOcs == 0 ){
-            window.location.href = window.location.href . '?ocs=1';
-            
-          }
-        }
-      });
-    </script>
+
 	
 	</head>
 	
