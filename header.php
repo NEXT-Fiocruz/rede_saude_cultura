@@ -31,6 +31,24 @@
 		<meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>" />
 		<meta property="og:description" content="<?php bloginfo('description'); ?>" />
 		<!-- Facebook OpenGraph Tags -->
+	
+	 <!-- Codigo para manter um ususário no evento com o tema pequeno  -->
+    <script >
+      jQuery(document).ready(function() {
+        
+        var isInIframe = (window.location != window.parent.location) ? true : false;
+        if(){
+          
+          var getOcs = <?php if(!empty($_GET['ocs'])){ print $_GET['ocs']; } else{ print 0;  }  ?> ;
+          
+          if( isInIframe && getOcs == 0 ){
+            window.location.href = window.location.href . '?ocs=1';
+            
+          }
+        }
+      });
+    </script>
+	
 	</head>
 	
 	<div id="barras-governo">
