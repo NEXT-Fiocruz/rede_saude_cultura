@@ -163,6 +163,7 @@ div#espaco-01 {
 }
 #home-content-top ul li{
 	border-bottom: 1px solid #ECECEC;
+	margin: 0 0 5px 0;
 }
 #home-content-top ul li a{
 	color: #DF912D;
@@ -208,10 +209,31 @@ div.widget_rss h4:first-child a img{
 2.2 - Header
 --------------------------------------------------------------*/
 
+#menu-header {
+	position: absolute;
+	right: 0;
+	padding: 3px;
+	background: #F1F1F1;
+	color: #8D8D8D;
+	border-left: 3px solid #DBDBDB;
+	border-bottom: 1px solid #E0E0E0;
+}
+#menu-header li {
+	float: left;
+	margin: 0 5px;
+}
+#menu_header ul.lista_menu_header a {
+	margin: 0 5px;
+	color: #818181;
+}
+#menu_header ul.lista_menu_header a:hover {
+	color: #646464;
+}
 #header {
 	position: relative;
 	height: 126px;
 	margin-bottom: 30px;
+	background: url('./_inc/images/bg_topo.jpg');
 	z-index: 1000; /* Allows drop-down navigation to appear above #container */
 }
 #header .padder {
@@ -220,12 +242,13 @@ div.widget_rss h4:first-child a img{
 #header div#logo {
   left: 10px;
   position: absolute;
-  top: 15px;
+  top: 0px;
   z-index: 1;
   overflow: hidden;
 }
 div.description {
 	top: 120px;
+	display: none;
 	font-weight: bold;
 	left: 60px;
 	position: absolute;
@@ -727,6 +750,10 @@ code {
 	font-family: Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;
 	color: #aaa;
 }
+div.txt {
+	color:	#000;
+	font-size:	11px;
+}
 
 /*--------------------------------------------------------------
 3.2 - Colors
@@ -774,8 +801,8 @@ ul.button-nav li a {
 }
 .sf-menu ul {
 	position:	absolute;
-	top: -999em;
-	width: 15em; /* left offset of submenus need to match (see below) */
+	top: 		44px;
+	width: 		15em; /* left offset of submenus need to match (see below) */
 }
 .sf-menu ul li {
 	width: 100%;
@@ -830,13 +857,16 @@ ul.sf-menu li li li.sfHover ul {
 	color: #fff;
 }
 .sf-menu li li a {
-	border-left: 1px solid #616161;
-  border-right: 1px solid #616161;
-  border-bottom: 1px solid #616161;
+	border-left: none;
+  border-right: none;
+  border-bottom: none;
 	height: auto; /* allows for long page titles */
 }
 .sf-menu li li, .sf-menu li.current_page_item li a {
-	background:	#767676;
+	background:	#5AAADF;
+	color:		#FFFFFF;
+	margin: 	0 0 2px 0;
+	padding:	5px 0 5px 5px;
 }
 .sf-menu li li li {
 	background:	#545454;
@@ -879,12 +909,11 @@ li.sfHover > a > .sf-sub-indicator {
 
 /*** shadows for all but IE6 ***/
 .sf-shadow ul {
-	background:	url('./_inc/images/shadow.png') no-repeat bottom right;
 	padding: 0 8px 9px 0;
-	-moz-border-radius-bottomleft: 17px;
-	-moz-border-radius-topright: 17px;
-	-webkit-border-top-right-radius: 17px;
-	-webkit-border-bottom-left-radius: 17px;
+	-moz-border-radius-bottomleft: 0;
+	-moz-border-radius-topright: 0;
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-left-radius: 0;
 }
 .sf-shadow ul.sf-shadow-off {
 	background: transparent;
@@ -957,7 +986,7 @@ div.page ul, div.page ol, div.page dl { margin: 0 0 18px 3em; }
 /*div.post ol, div.page ol { list-style: decimal; }*/
 div.post ol ol, div.page ol ol { list-style: upper-alpha; }
 div.post dl, div.page dl { margin-left: 0; }
-div.post dt, div.page dt { font-size: 14px; font-weight: bold; font-family: ; }
+div.post dt, div.page dt { font-size: 14px; font-weight: bold; }
 div.post dd, div.page dd { margin: 0 0 15px 0;}
 div.post ul ul, div.post ol ol, div.post ul ol, div.post ol ul,
 div.page ul ul, div.page ol ol, div.page ul ol, div.page ol ul {
@@ -2178,13 +2207,7 @@ div#content.two_column div#item-body, div#content.two_column div#item-header div
 	float: left !important;
 	width: auto;
 }
-body.group-forum div#item-header, body.group-forum div#item-header-content,
-body.group-forum div#item-body, body.group-forum div#item-header div#message {
-	width: 100% !important;
-}
-body.group-forum div#item-header div#message {
-	margin-top: 0;
-}
+
 div#item-header-avatar {
 	position: absolute;
 	left: -180px;
@@ -2203,7 +2226,6 @@ body.home-page div.item-list-tabs,
 ul.button-nav {
 	padding: 0;
 	background-image: url( ./_inc/images/item-list-tabs_bottom.gif );
-	background: #none;
 	background-position: bottom;
 	background-repeat: repeat-x;
 	border-bottom: none;
@@ -3484,7 +3506,6 @@ body {
 	text-align: center;
 	word-wrap: break-word;
 	min-width: 100px;
-	_width:expression(this.currentStyle.getAttribute('100px')); /* min-width for IE7 */
 }
 #wp-admin-bar li a:hover {
 	color: #81b327;
@@ -3551,9 +3572,6 @@ padding: 0 10px 0 0;
 }
 #wp-admin-bar ul li a {
 	display: block;
-}
-#wp-admin-bar ul.main-nav li:hover, #wp-admin-bar ul.main-nav li.sfhover, #wp-admin-bar ul.main-nav li ul li.sfhover {
-	*/border-color: #567312;*/
 }
 
 /*--------------------------------------------------------------
@@ -3679,7 +3697,6 @@ body {
 	height: 190px;
 	margin-bottom: 30px;
 	margin-top: 0;
-	background: url(./_inc/images/bg_topo.jpg) no-repeat;
 }
 #header h1{
   position: absolute;
@@ -3956,7 +3973,7 @@ h1, h2, h3, h4 { font-family: Arial, Helvetica, sans-serif; }
 .sf-menu {
   width: 1029px;
   height: 68px;
-  overflow: hidden;
+  overflow: visible;
   background: url(./_inc/images/bg_menu.png) no-repeat;
   margin: 0 0 0 -13px;
   padding: 0 0 0 15px;
@@ -4670,7 +4687,7 @@ div.generic-button group-button private a.group-button leave-group{
 	right: 145px;
 	background: #7EA732 url('./_inc/images/bg-bug.jpg') 0 35px;
 }
-#bug:hover {
+#bug:hover, #suporte:hover {
 text-decoration: none;
 }
 /* - - - - - BOTÕES - - - -  */
@@ -4780,4 +4797,17 @@ h3.widgettitle-hb {
 #group-imagem-pequena img{
  	width: 50px !important;
  	height: 50px !important;
+}
+div#loginlogout-3 form#loginform {
+	display: none;
+}
+div#loginlogout-3 div {
+	display: none;
+}
+div.title-bullet{
+	background: url('./_inc/images/bullet.png') no-repeat 0;
+	padding: 0 0 0 15px;
+	margin:	 0 0 10px 0;
+	font-size: 14px;
+	color: #459C39;
 }

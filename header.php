@@ -2,6 +2,18 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 	<head profile="http://gmpg.org/xfn/11">
+
+   <!-- Codigo para manter um ususário no evento com o tema pequeno  -->
+    <script >
+        var isInIframe = (window.location != window.parent.location) ? true : false;
+          
+        var getOcs = <?php if(!empty($_GET['ocs'])){ print $_GET['ocs']; } else{ print 0;  }  ?> ;
+          
+        if( isInIframe && getOcs == 0 ){
+          window.location.href = window.location.href + '?ocs=1'; 
+        }
+    </script>
+
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 		<title><?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?></title>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
@@ -31,6 +43,9 @@
 		<meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>" />
 		<meta property="og:description" content="<?php bloginfo('description'); ?>" />
 		<!-- Facebook OpenGraph Tags -->
+	
+
+	
 	</head>
 	
 	<div id="barras-governo">
@@ -54,8 +69,28 @@
 			<div id="header">
 			
 				<div class="padder">
-
 						
+					<div id="menu-header">
+						<?php
+							wp_nav_menu( array(
+							'menu' 				=> 'menu_header',
+							'theme_location'    => 'menu_header',
+							'container'         => 'div',
+							'container_class'   => 'menu_header',
+							'container_id'      => 'menu_header',
+							'menu_class'        => 'lista_menu_header',
+							'echo'           	=> true,
+							'menu_id'        	=> 'menu_header',
+							'before'         	=> '',
+							'after'          	=> '|',
+							'link_before'    	=> '',
+							'link_after'     	=> '',
+							'depth'          	=> 0,
+							'walker'          	=> '',                
+						) );
+						?>
+					</div>	
+					
 						<?php if($logo): ?>
 						<div id="logo">
 								<a href="<?php echo site_url() ?>" title="<?php _e( 'Home', 'buddypress' )
