@@ -222,7 +222,7 @@ function rede_saude_cultura_remove_activity_new_member( $a, $activities ) {
    
   return $activities;
 }
-add_action('bp_has_activities','rede_saude_cultura_remove_activity_new_member', 10, 2 );
+# add_action('bp_has_activities','rede_saude_cultura_remove_activity_new_member', 10, 2 );
 
 
 ?>
