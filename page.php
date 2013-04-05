@@ -4,7 +4,7 @@
 
   <?php do_action( 'bp_before_directory_members_content' ) ?>
 
-  <div id="content" class="three_column">
+  <div id="content" class="two_column">
 		<div class="padder">
 		
 		<?php do_action( 'bp_before_blog_page' ) ?>

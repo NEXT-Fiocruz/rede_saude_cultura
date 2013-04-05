@@ -8,8 +8,6 @@
 
 <?php else : ?>
 
-	<?php locate_template( array( 'groups/single/forum/forum-header.php' ), true ) ?>
-
 	<div class="forums single-forum">
 		<?php locate_template( array( 'forums/forums-loop.php' ), true ) ?>
 	</div><!-- .forums.single-forum -->
@@ -31,7 +29,7 @@
 					<p><?php _e( 'You will auto join this group when you start a new topic.', 'buddypress' ) ?></p>
 				<?php endif; ?>
 
-				<p id="post-new"></p>
+				<a name="post-new" id="post-new"></a>
 				<h4><?php _e( 'Post a New Topic:', 'buddypress' ) ?></h4>
 
 				<label><?php _e( 'Title:', 'buddypress' ) ?></label>

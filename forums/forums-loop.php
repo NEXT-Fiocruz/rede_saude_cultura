@@ -75,7 +75,8 @@
 <?php else: ?>
 
 	<div id="message" class="info">
-		<p><?php _e( 'Sorry, there were no forum topics found.', 'buddypress' ) ?></p>
+		<p>Ops, ainda não tem nada aqui. <br/>
+		   Para iniciar a primeira conversa use o formulário abaixo</p>
 	</div>
 
 <?php endif;?>
